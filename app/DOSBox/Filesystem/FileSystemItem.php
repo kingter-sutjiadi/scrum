@@ -35,10 +35,16 @@ abstract class FileSystemItem {
     }
 
     protected static function checkName($name) {
+        $outputter->printNoLine("asdasdasdasdas");
         if( strstr($name, "\\") != false || strstr($name, "/") != false
             || strstr($name, ",") != false || strstr($name, " ") != false) {
             return false;
         }
+        // $outputter->printNoLine("<DIR>");
+        // $data = $this->directoryToPrint->getContent();
+        // foreach ($directoryContent as $item) {
+        //     $outputter->newLine($item);
+        // }
 
         return true;
     }
