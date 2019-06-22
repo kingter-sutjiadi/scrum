@@ -26,12 +26,12 @@ class CmdVer extends Command {
         if($this->getParameterCount() == 1) {
             $param = strtoupper($this->params[0]);
             if($param == '/W') {
-                    $outputter->printLine(" [Version 5.1.2600]");
-                    $outputter->printLine(" Aldo | Afdolash Nur Kaffah -- afdolash.kaffah@idntimes.com ");
-                    $outputter->printLine(" Uki | Muhibush Shulhi Muhammad -- muhibush.muhammad@idntimes.com ");
-                    $outputter->printLine(" Arfian | Arfian Bagus Nurmajid -- arfian.nurmajdi@idntimes.com ");
-                    $outputter->printLine(" Gun | Stefanus Gunawan Hindorjono -- stefanus.hindrojono@idntimes.com ");
-                    $outputter->printLine(" Kingter | Kingter Sutjiadi -- kingter.sutjiadi@idntimes.com ");
+                    $outputter->printLine("[Version 5.1.2600]");
+                    $outputter->printLine("   Aldo | Afdolash Nur Kaffah -- afdolash.kaffah@idntimes.com");
+                    $outputter->printLine("   Uki | Muhibush Shulhi Muhammad -- muhibush.muhammad@idntimes.com");
+                    $outputter->printLine("   Arfian | Arfian Bagus Nurmajid -- arfian.nurmajdi@idntimes.com");
+                    $outputter->printLine("   Gun | Stefanus Gunawan Hindorjono -- stefanus.hindrojono@idntimes.com");
+                    $outputter->printLine("   Kingter | Kingter Sutjiadi -- kingter.sutjiadi@idntimes.com");
                 } else {
                     $outputter->printLine("[Version 5.1.2600]");
                 }
