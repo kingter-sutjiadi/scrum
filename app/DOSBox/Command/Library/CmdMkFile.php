@@ -25,12 +25,10 @@ class CmdMkFile extends Command {
         $fileName = $this->params[0];
 
         $dirContent =$this->getDrive()->getCurrentDirectory()->getContent();
-        // $outputter->printLine(count($dirContent));
         if (count($dirContent) > 0){
             foreach ($dirContent as $item) {
-                // $outputter->printLine($item->getName());
                 if ($this->chopExtension($item->getName()) == $this->chopExtension($fileName)){
-                    $outputter->printLine("File sama");
+                    $outputter->printLine("Maaf File sama");
                 } else {
                     if (count($this->params) > 1){
                         $fileContent = $this->params[1];

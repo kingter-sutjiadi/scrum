@@ -47,4 +47,8 @@ class CmdMkDir extends Command {
         $newDirectory = new Directory($newDirectoryName);
         $drive->getCurrentDirectory()->add($newDirectory);
     }
+
+    public function chopExtension($filename) {
+        return substr($filename, 0, strrpos($filename, '.'));
+    }
 }
