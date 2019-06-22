@@ -23,12 +23,17 @@ class CmdMkFile extends Command {
 
     public function execute(IOutputter $outputter){
         $fileName = $this->params[0];
-
+        $basename = "";
         $dirContent =$this->getDrive()->getCurrentDirectory()->getContent();
+
         if (count($dirContent) > 0){
             foreach ($dirContent as $item) {
-                if ($this->chopExtension($item->getName()) == $this->chopExtension($fileName)){
-                    $outputter->printLine("Maaf File sama");
+                $basename = $this->chopExtension($item->getName());
+                if ($basename == ""){
+                    $basename = $item->getName();
+                }
+                if ($basename == $this->chopExtension($fileName)){
+                    $outputter->printLine("Maaf File atau Folder ". $basename ." sama");
                 } else {
                     if (count($this->params) > 1){
                         $fileContent = $this->params[1];

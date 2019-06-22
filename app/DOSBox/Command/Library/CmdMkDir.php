@@ -38,8 +38,25 @@ class CmdMkDir extends Command {
     }
 
     public function execute(IOutputter $outputter){
+        $basename = "";
         for($i=0; $i < $this->getParameterCount(); $i++) {
-            $this->createDirectory($this->params[$i], $this->getDrive());
+            $dirContent =$this->getDrive()->getCurrentDirectory()->getContent();
+            if (count($dirContent) > 0){
+                foreach ($dirContent as $item) {
+                    $basename = $this->chopExtension($item->getName());
+                    if ($basename == ""){
+                        $basename = $item->getName();
+                    }
+                    if ($basename == $this->params[$i]){
+                        $outputter->printLine("Maaf nama File atau Folder ".$item->getName()." sama");
+                    } else {
+                        $this->createDirectory($this->params[$i], $this->getDrive());
+                    }
+                }
+                
+            } else {
+                $this->createDirectory($this->params[$i], $this->getDrive());
+            }
         }
     }
 
