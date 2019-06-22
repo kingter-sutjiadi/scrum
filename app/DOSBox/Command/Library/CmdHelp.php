@@ -27,22 +27,24 @@ class CmdHelp extends Command {
                 $param = strtoupper($this->params[0]);
                 if($param == 'CD')
                     $outputter->printLine($this->params[0]." Displays the name of or changes the current directory." );
-                if($param == 'DIR')
+                else if($param == 'DIR')
                     $outputter->printLine($this->params[0]." Displays a list of files and subdirectories in a directory" );
-                if($param == 'EXIT')
+                else if($param == 'EXIT')
                     $outputter->printLine($this->params[0]." Quits the CMD.EXE program (command interpreter)" );
-                if($param == 'FORMAT')
+                else if($param == 'FORMAT')
                     $outputter->printLine($this->params[0]." Formats a disk for use with Windows" );
-                if($param == 'HELP')
+                else if($param == 'HELP')
                     $outputter->printLine($this->params[0]." Provides Help information for Windows commands" );
-                if($param == 'LABEL')
+                else if($param == 'LABEL')
                     $outputter->printLine($this->params[0]." Creates, changes, or deletes the volume label of a disk" );
-                if($param == 'MKDIR')
+                else if($param == 'MKDIR')
                     $outputter->printLine($this->params[0]." Creates a directory" );
-                if($param == 'MKFILE')
+                else if($param == 'MKFILE')
                     $outputter->printLine($this->params[0]." Creates a file" );
-                if($param == 'MOVE')
-                    $outputter->printLine($this->params[0]." Moves one or more files from one directory to another directory" );      
+                else if($param == 'MOVE')
+                    $outputter->printLine($this->params[0]." Moves one or more files from one directory to another directory" ); 
+                else
+                    $outputter->printLine("Command not found" );      
         } else {
             $outputter->printLine("Acceptance Criterias: " );
             $outputter->printLine("   CD Displays the name of or changes the current directory. " );
