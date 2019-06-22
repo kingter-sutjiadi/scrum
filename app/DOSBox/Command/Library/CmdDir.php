@@ -69,7 +69,8 @@ class CmdDir extends Command {
                 $outputter->printNoLine($item->getSize() . " ");
             }
 
-            $outputter->printNoLine($item->getName());
+            $outputter->printNoLine($item->getName(). " ");
+            $outputter->printNoLine($item->getTime());
             $outputter->newLine();
         }
     }
