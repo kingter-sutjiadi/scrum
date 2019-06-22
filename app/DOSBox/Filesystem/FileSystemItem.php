@@ -40,11 +40,6 @@ abstract class FileSystemItem {
             || strstr($name, ",") != false || strstr($name, " ") != false) {
             return false;
         }
-        // $outputter->printNoLine("<DIR>");
-        // $data = $this->directoryToPrint->getContent();
-        // foreach ($directoryContent as $item) {
-        //     $outputter->newLine($item);
-        // }
 
         return true;
     }
