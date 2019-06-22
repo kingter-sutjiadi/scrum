@@ -10,6 +10,7 @@ class File extends FileSystemItem {
     public function __construct($name, $content){
         parent::__construct($name, NULL);
         $this->content = $content;
+        $this->time = date('Y:m:d h:i:s');
     }
 
     public function getFileContent() {
@@ -30,5 +31,9 @@ class File extends FileSystemItem {
 
     public function getNumberOfContainedDirectories() {
         return 0;  // A file does not contain any sub-directories
+    }
+
+    public function getTime(){
+        return $this->time;
     }
 }
