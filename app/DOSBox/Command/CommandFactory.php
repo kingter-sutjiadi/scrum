@@ -23,11 +23,8 @@ class CommandFactory {
         array_push($this->commands, new CmdMkFile("mkfile", $drive));
         array_push($this->commands, new CmdMkFile("mf", $drive));
         array_push($this->commands, new CmdHelp("help", $drive));
-<<<<<<< HEAD
         array_push($this->commands, new CmdTime("time", $drive));
-=======
         array_push($this->commands, new CmdVer("ver", $drive));
->>>>>>> ace642c7f2e8a4bc7467ab67955410e8bf872b57
 
         // Add your commands here
     }
