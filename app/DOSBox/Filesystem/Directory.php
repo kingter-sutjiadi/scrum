@@ -10,6 +10,7 @@ class Directory extends FileSystemItem {
     public function __construct($name){
         parent::__construct($name, NULL);
         $this->content = array();
+        $this->time = date('Y:m:d h:i:s');
     }
 
     // Adding File and Directory using the same method.
@@ -40,6 +41,10 @@ class Directory extends FileSystemItem {
 
     public function getContent(){
         return $this->content;
+    }
+
+    public function getTime(){
+        return $this->time;
     }
 
     public function isDirectory() {
